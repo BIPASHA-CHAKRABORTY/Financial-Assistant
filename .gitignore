@@ -1,0 +1,7 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+data/documents/*.pdf
+data/indexes/*.index
+data/indexes/documents.json
