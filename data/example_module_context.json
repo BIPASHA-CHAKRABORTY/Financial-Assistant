@@ -1,0 +1,14 @@
+{
+  "risk_model": {
+    "risk_category": "High",
+    "risk_score": 0.78
+  },
+  "stock_prediction": {
+    "trend": "Bearish",
+    "confidence": 0.72
+  },
+  "news_sentiment": {
+    "label": "Negative",
+    "score": 0.31
+  }
+}
