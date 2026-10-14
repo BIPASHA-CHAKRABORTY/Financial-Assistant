@@ -21,3 +21,12 @@ CHUNK_OVERLAP = int(os.getenv("CHUNK_OVERLAP", "150"))
 
 for directory in (DOCUMENT_STORAGE_PATH, VECTOR_STORE_PATH):
     directory.mkdir(parents=True, exist_ok=True)
+
+import os
+
+ENABLE_TABLE_EXTRACTION = os.getenv("ENABLE_TABLE_EXTRACTION", "true").lower() == "true"
+ENABLE_CHART_ANALYSIS = os.getenv("ENABLE_CHART_ANALYSIS", "true").lower() == "true"
+MIN_IMAGE_PX = int(os.getenv("MIN_IMAGE_PX", "150"))                 # ignore logos/icons
+MAX_CHARTS_PER_DOCUMENT = int(os.getenv("MAX_CHARTS_PER_DOCUMENT", "30"))   # vision cost guard
+TABLE_MAX_ROWS = int(os.getenv("TABLE_MAX_ROWS", "25"))
+# GEMINI_VISION_MODEL is read directly in app/vision.py (falls back to GEMINI_MODEL)
