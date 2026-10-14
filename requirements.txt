@@ -1,0 +1,23 @@
+fastapi
+uvicorn[standard]
+python-multipart
+pydantic
+python-dotenv
+httpx
+numpy
+pytest
+
+# --- PDF extraction (text + tables) ---
+pymupdf>=1.24.0          # page.find_tables() needs >= 1.23; text, images, page rendering
+pymupdf4llm              # layout-aware PDF -> Markdown (keeps tables as Markdown)
+pandas                   # clean up / normalise extracted tables
+tabulate                 # DataFrame.to_markdown() for table chunks
+
+# --- Charts / images / scanned pages ---
+pillow                   # crop and resize chart images before sending to Gemini
+rapidocr-onnxruntime     # OCR fallback for scanned pages (no system Tesseract needed)
+
+# --- Embeddings, vector search, LLM ---
+sentence-transformers
+faiss-cpu
+google-genai             # Gemini text + vision (chart/graph understanding)
